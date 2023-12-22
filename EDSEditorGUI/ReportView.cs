@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
-using mshtml;
+using MSHTML;
 
 namespace ODEditor
 {
@@ -38,8 +38,8 @@ namespace ODEditor
 
             string text = System.IO.File.ReadAllText(csspath);
 
-            mshtml.HTMLDocument CurrentDocument = (HTMLDocument)webBrowser1.Document.DomDocument;
-            mshtml.IHTMLStyleSheet styleSheet = CurrentDocument.createStyleSheet("", 0);
+            MSHTML.HTMLDocument CurrentDocument = (HTMLDocument)webBrowser1.Document.DomDocument;
+            MSHTML.IHTMLStyleSheet styleSheet = CurrentDocument.createStyleSheet("", 0);
             styleSheet.cssText = text;
         }
 
