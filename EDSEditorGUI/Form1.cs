@@ -1075,7 +1075,6 @@ namespace ODEditor
                     DocumentationGen docgen = new DocumentationGen();
                     docgen.genhtmldoc(temp, dv.eds);
                     docgen.genmddoc(temp2, dv.eds, this.gitVersion);
-                    System.Diagnostics.Process.Start("file://" + temp2);
                     if (IsRunningOnMono())
                     {
                         System.Diagnostics.Process.Start("file://" + temp);
