@@ -101,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="SourceGrid" Version="4.4.0" />
+    <PackageReference Include="SourceGrid-huanlin" Version="6.0.10" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   <PropertyGroup>
