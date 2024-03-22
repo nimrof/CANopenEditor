@@ -13,9 +13,13 @@ jobs:
 #    runs-on: ubuntu-latest # Error: setup-msbuild can only be run on Windows runners
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Setup .NET
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v1.3
+    - name: C# problem matcher
+      run: |
+        Invoke-WebRequest "https://raw.githubusercontent.com/actions/setup-dotnet/main/.github/csc.json" -OutFile "csc.json"
+        echo "::add-matcher::csc.json"
 #      uses: actions/setup-dotnet@v2
 #      with:
 #        dotnet-version: 5.0.x
@@ -35,7 +39,7 @@ jobs:
       run: |
           dotnet test --no-build --verbosity normal
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: EDSEditor
         path: EDSEditorGUI\bin\Release\
