@@ -22,6 +22,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Index_8287_16x.ico</ApplicationIcon>
