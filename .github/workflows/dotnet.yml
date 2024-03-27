@@ -43,5 +43,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: EDSEditor
+        name: EDSEditor_${{ matrix.dotnet }}
         path: EDSEditorGUI\bin\Release\
